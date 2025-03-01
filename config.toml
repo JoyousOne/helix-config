@@ -1,0 +1,73 @@
+theme = "onedark"
+
+[editor]
+line-number = "absolute"
+mouse = false
+cursorline = true
+cursorcolumn = false
+# bufferline = "always"
+# Show a ruler at column 80, 120
+# rulers = [80, 120]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+character = "▏"
+render = true
+skip-levels = 1
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "⍽"    # Non Breaking SPace
+tab = "→"
+newline = "⏎"
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
+
+[editor.statusline]
+left = [
+  "mode",
+  "file-modification-indicator",
+  "spinner",
+  "diagnostics",
+  "version-control",
+]
+center = ["file-name"]
+right = ["position", "separator", "position-percentage"]
+separator = "| "
+
+
+[keys.normal]
+C-o = ":open ~/.config/helix/config.toml" # Maps Ctrl-o to opening of the helix config file
+C-r = ":config-reload"
+# C-s = ":write"
+
+"tab" = "goto_next_function"   # Select and jump to the next function via Treesitter
+"S-tab" = "goto_prev_function" # Select and jump to the previous function via Treesitter 
+
+# Mark line and move with them up/down
+# https://github.com/helix-editor/helix/discussions/5764#discussioncomment-4840408
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+
+x = "select_line_below"
+X = "select_line_above"
+
+[keys.select]
+x = "select_line_below"
+X = "select_line_above"
