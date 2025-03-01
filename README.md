@@ -2,6 +2,8 @@
 
 My helix text editor config
 
+![demo](./pictures/demo.png)
+
 ## Table of content:
 
 - [Installation](#installation)
