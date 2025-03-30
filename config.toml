@@ -46,6 +46,13 @@ center = ["file-name"]
 right = ["position", "separator", "position-percentage"]
 separator = "| "
 
+[editor.lsp]
+enable = true
+auto-signature-help = true
+display-messages = true
+# https://github.com/helix-editor/helix/pull/5934#issuecomment-1445040945
+display-inlay-hints = true
+
 
 [keys.normal]
 C-o = ":open ~/.config/helix/config.toml" # Maps Ctrl-o to opening of the helix config file
