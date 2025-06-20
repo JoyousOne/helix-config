@@ -32,7 +32,7 @@ space = " "
 nbsp = "⍽"    # Non Breaking SPace
 tab = "→"
 newline = "⏎"
-tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
+tabpad = " "  # Tabs will look like "→···" (depending on tab width)
 
 [editor.statusline]
 left = [
