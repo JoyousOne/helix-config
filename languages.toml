@@ -6,13 +6,21 @@ auto-format = true
 [[language]]
 name = "markdown"
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "rust"
 auto-format = true
 
 roots = ["Cargo.toml", "Cargo.lock"]
+
+# https://helix-editor.vercel.app/reference/language-servers#go
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimport" }
+# TOFIX error msg
+# go mod tidy 
 
 [language.auto-pairs]
 '(' = ')'
