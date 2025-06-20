@@ -75,6 +75,12 @@ C-k = [
 x = "select_line_below"
 X = "select_line_above"
 
+
+# Rust keymap
+# [keys.normal.A-r]
+A-t = ":insert-output printf '#[cfg(test)]\nmod tests {\nuse super::*;\n#[test]\nfn test {}\n}'"
+
+
 [keys.select]
 x = "select_line_below"
 X = "select_line_above"
